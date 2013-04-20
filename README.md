@@ -1,4 +1,4 @@
-FuelPHP 日本語 パッケージ
+FuelPHP 日本語パッケージ
 ===================================
 
 これはなに？
@@ -19,9 +19,8 @@ FuelPHP 日本語 パッケージ
 
 1. ``` PKGPATH ``` に展開([Packages - General - FuelPHP Documentation](http://fuelphp.com/docs/general/packages.html)を参照)
 2. ``` APPPATH/config/config.php ``` の ``` 'always_load' => array('packages' => array()) ``` にパッケージを追加
-3. ``` APPPATH/config/config.php ``` の ``` 'package_paths' => array() ``` に ``` PKGPATH ``` を追加(これをしないとマイグレーションが実行されない)
-4. ``` APPPATH/config/config.php ``` の言語を日本語に変更。
-   ``` language ``` に ``` ja ``` を指定し、``` locale ``` に ``` ja_JP.UTF-8 ``` を指定。
+3. ``` APPPATH/config/config.php ``` の言語を日本語に変更。
+   ``` 'language' ``` に ``` 'ja' ``` を指定し、``` 'locale' ``` に ``` 'ja_JP.UTF-8' ``` を指定。
 
 使い方
 ------
@@ -32,11 +31,12 @@ FuelPHP 日本語 パッケージ
     $val -> add('test', 'Test field')
          -> add_rule('required');
     if (!$val->run(array('test' => ''))) {
-        Sesstion::set_flush('error', implode('', $val->error())); // "Test field は入力が必須です。" が設定される
+        Sesstion::set_flush('error', implode('', $val->error()));
+        // ↑ "Test field は入力が必須です。" が設定される
     }
 
 ライセンス
 ----------
 
 Copyright(c) 2013 sharkpp All rights reserved.
-このプログラムは、The MIT License の元で公開されています。
+このパッケージは、The MIT License の元で公開されています。
