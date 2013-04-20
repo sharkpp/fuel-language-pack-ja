@@ -1,4 +1,4 @@
-FuelPHP 日本語パッケージ
+FuelPHP 日本語言語パッケージ
 ===================================
 
 これはなに？
@@ -13,6 +13,7 @@ FuelPHP 日本語パッケージ
 ----
 
 * FuelPHP 1.5
+* FuelPHP 1.5
 
 インストール
 ------------
@@ -20,13 +21,16 @@ FuelPHP 日本語パッケージ
 1. ``` PKGPATH ``` に展開([Packages - General - FuelPHP Documentation](http://fuelphp.com/docs/general/packages.html)を参照)
 2. ``` APPPATH/config/config.php ``` の ``` 'always_load' => array('packages' => array()) ``` にパッケージを追加
 3. ``` APPPATH/config/config.php ``` の言語を日本語に変更。
-   ``` 'language' ``` に ``` 'ja' ``` を指定し、``` 'locale' ``` に ``` 'ja_JP.UTF-8' ``` を指定。
+   ``` 'language' ``` に ``` 'ja' ```  を指定。
 
 使い方
 ------
 
 インストール後はValidationクラスなどで表示されるメッセージが日本語で表示されます。
 
+もしくは、インストール手順の2まで実行し、``` \Config::set('language', 'ja'); ``` を各種メッセージの処理前に実行してください。
+
+動作例.
     $val = \Validation::forge();
     $val -> add('test', 'Test field')
          -> add_rule('required');
