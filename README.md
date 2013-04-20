@@ -13,7 +13,7 @@ FuelPHP 日本語言語パッケージ
 ----
 
 * FuelPHP 1.5
-* FuelPHP 1.5
+* ``` 'language' => 'ja' ``` もしくは ``` \Config::set('language', 'ja'); ```
 
 インストール
 ------------
